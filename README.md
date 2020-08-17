@@ -1,5 +1,10 @@
 #### Usar `npm install` para instalar repositórios
 
+Credenciais do administrador:
+
+E-mail: admin@admin.br
+senha: admin123
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
