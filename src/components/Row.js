@@ -9,7 +9,7 @@ class Row extends Component {
        return Object.keys(this.props.element)
         .filter(i => i === "nome" || i === "desc" || i === "email")
         .map(i => {
-            return (<td>{this.props.element[i]}</td>)
+            return (<td key={i}>{this.props.element[i]}</td>)
         })
 
         

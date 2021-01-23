@@ -14,10 +14,10 @@ class Navbar extends Component {
             if (this.props.logStatus.isEmail === 'true' || this.props.logStatus.isAdmin === 'true') {
                 arr.push((
                     <>
-                        <li className="navbar-item">
+                        <li key='1' className="navbar-item">
                             <Link to="/lista/workstations" className="nav-link">Workstations</Link>
                         </li>
-                        <li className="navbar-item">
+                        <li key='2' className="navbar-item">
                             <Link to="/lista/reunioes" className="nav-link">Salas de Reunião</Link>
                         </li>
                     </>
@@ -27,7 +27,7 @@ class Navbar extends Component {
             //Se um usuário for um Administrador, ele pode editar todos os usuários, caso não, ele pode apenas editar seus próprios dados
             arr.push((  
                     <>
-                        <li className="navbar-item">
+                        <li key='3' className="navbar-item">
                             <Link   
                                 to={this.props.logStatus.isAdmin === 'true' ? '/lista/usuarios/' : `/lista/usuarios/edit/${this.props.logStatus.id}`} 
                                 className="nav-link">
@@ -45,10 +45,10 @@ class Navbar extends Component {
         else {
             return (
                     <>
-                        <li className="navbar-item">
+                        <li key='4' className="navbar-item">
                             <Link to="/login" className="nav-link">Login</Link>
                         </li>
-                        <li className="navbar-item">
+                        <li key='5' className="navbar-item">
                             <Link to="/lista/usuarios/add" className="nav-link">Registrar</Link>
                         </li>
                     </>
