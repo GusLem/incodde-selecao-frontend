@@ -37,7 +37,7 @@ class App extends Component {
       <Router>
 
         <div className="container">
-          <Navbar stateRefresh={this.stateRefresh} logStatus={this.state} />
+          <Navbar logStatus={this.state} />
           <Route path ="/" exact render={props => (
             <>
               <Dashboard stateRefresh={this.stateRefresh} />

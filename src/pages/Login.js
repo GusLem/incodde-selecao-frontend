@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import LoginElement from '../components/LoginElement';
 
 class Login extends Component {
 
@@ -61,27 +62,22 @@ class Login extends Component {
                 <h3>Login</h3>
                 <form onSubmit={this.onSubmit}>
 
-                <div className="form-group"> 
-                    <label>E-mail: </label>
-                    <input  type="text"
-                        required
-                        className="form-control"
-                        value={this.state.email}
-                        name="email"
-                        onChange={this.onChange}
-                        />
-                </div>
-                <div className="form-group"> 
-                    <label>Senha: </label>
-                    <input  type="password"
-                        required
-                        className="form-control"
-                        minLength="6"
-                        value={this.state.senha}
-                        name="senha"
-                        onChange={this.onChange}
-                        />
-                </div>
+                <LoginElement 
+                    type="email"
+                    text="E-mail: " 
+                    value={this.state.email}
+                    name="email"
+                    onCh={this.onChange}
+                />
+
+                <LoginElement 
+                    type="password"
+                    text="Senha: " 
+                    value={this.state.senha}
+                    name="senha"
+                    minL="6"
+                    onCh={this.onChange}
+                />
         
                 <div className="form-group">
                     <input type="submit" value="Efetuar Login" className="btn btn-primary" />
